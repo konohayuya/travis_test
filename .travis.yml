@@ -13,7 +13,7 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
 
 install:
-  - sudp apt-get install -y pandoc
+  - sudo apt-get install -y pandoc
 
 before_script:
   - chmod 700 ./script.sh
