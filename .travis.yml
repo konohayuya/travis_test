@@ -14,8 +14,9 @@ before_install:
   - chmod 600 ~/.ssh/id_rsa
 
 install:
-  - sudo apt-get install -y pandoc
-  - sudo apt-get install -y texlive-lang-japanese
+  - sudo aptinstall -y pandoc
+  - sudo apt install -y texlive-lang-japanese
+  - sudo apt install -y texlive-luatex
 
 before_script:
   - chmod 700 ./script.sh
