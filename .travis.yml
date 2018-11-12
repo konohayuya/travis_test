@@ -35,8 +35,6 @@ before_script:
 
 script:
   - ./script.sh
-
-after_sccess:
   - ls -Fl
   - git config --global user.email $GH_USER_EMAIL
   - git config --global user.name $GH_USER_NAME
