@@ -1,28 +1,30 @@
 dist: xenial
 language: generic
-sudo: required
+sudo: false
 
 branches:
   only:
     - master
 
 before_install:
-  - sudo apt-get update
   - openssl aes-256-cbc -K $encrypted_18cedf69c8fc_key -iv $encrypted_18cedf69c8fc_iv -in travis-test.enc -out travis-test -d
   - echo -e "Host github.com\n\tStrictHostKeyChecking no\nIdentityFile ~/.ssh/travis-test\n" >> ~/.ssh/config
   - cp travis-test ~/.ssh/id_rsa
   - chmod 600 ~/.ssh/id_rsa
 
-install:
-  - sudo apt install -y pandoc
-  - sudo apt install -y texlive-lang-japanese
-  - sudo apt install -y texlive-luatex
-  - sudo apt install -y texlive-latex-recommended
-  - sudo apt install -y texlive-latex-extra
-  - sudo apt install -y fonts-lmodern
-  - sudo apt install -y texlive-xetex
-  - sudo apt install -y latex-cjk-common
-  - sudo apt install -y texlive-fonts-extra
+
+addons:
+  apt:
+    packages:
+      - pandoc
+      - texlive-lang-japanese
+      - texlive-luatex
+      - texlive-latex-recommended
+      - texlive-latex-extra
+      - fonts-lmodern
+      - texlive-xetex
+      - latex-cjk-common
+      - texlive-fonts-extra
 
 before_script:
   - chmod 700 ./script.sh
