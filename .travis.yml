@@ -41,5 +41,5 @@ script:
   - git checkout -b branch-autobuild
   - git add *.pdf
   - git commit -m "auto build complete"
-  - git push 
+  - git push --set-upstream origin branch-autobuild
 
