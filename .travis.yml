@@ -17,6 +17,12 @@ install:
   - sudo apt install -y pandoc
   - sudo apt install -y texlive-lang-japanese
   - sudo apt install -y texlive-luatex
+  - sudo apt install -y texlive-latex-recommended
+  - sudo apt install -y texlive-latex-extra
+  - sudo apt install -y fonts-lmodern
+  - sudo apt install -y texlive-xetex
+  - sudo apt install -y latex-cjk-common
+  - sudo apt install -y texlive-fonts-extra
 
 before_script:
   - chmod 700 ./script.sh
