@@ -25,6 +25,10 @@ addons:
       - texlive-xetex
       - pandoc
       - latex-cjk-common
+      - lmodern
+
+cache:
+  - apt: true
 
 before_script:
   - chmod 700 ./script.sh
