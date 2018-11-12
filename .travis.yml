@@ -24,7 +24,7 @@ addons:
       - texlive-luatex
       - texlive-xetex
       - pandoc
-#      - latex-cjk-common
+      - latex-cjk-common
 
 before_script:
   - chmod 700 ./script.sh
