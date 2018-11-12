@@ -36,8 +36,8 @@ before_script:
 script:
   - ./script.sh
   - ls -Fl
-  - git config --global user.email $GH_USER_EMAIL
-  - git config --global user.name $GH_USER_NAME
+  - echo $GH_USER_EMAIL | xargs git config --global user.email
+  - echo $GH_USER_NAMEb| xargsbgit config --global user.name
   - git checkout -b branch-autobuild
   - git add *.pdf
   - git commit -m "auto build complete (JOB $TRAVIS_JOB_NUMBER) [ci skip]"
