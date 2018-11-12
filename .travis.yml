@@ -16,15 +16,15 @@ before_install:
 addons:
   apt:
     packages:
-      - pandoc
+      - fonts-lmodern
+      - texlive-fonts-extra
       - texlive-lang-japanese
-      - texlive-luatex
       - texlive-latex-recommended
       - texlive-latex-extra
-      - fonts-lmodern
+      - texlive-luatex
       - texlive-xetex
-      - latex-cjk-common
-      - texlive-fonts-extra
+      - pandoc
+#      - latex-cjk-common
 
 before_script:
   - chmod 700 ./script.sh
