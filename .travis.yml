@@ -35,11 +35,13 @@ before_script:
 
 script:
   - ./script.sh
+
+after_sccess:
   - ls -Fl
   - git config --global user.email "travis@travis-ci.org"
   - git config --global user.name "Travis CI"
   - git checkout -b branch-autobuild
   - git add *.pdf
-  - git commit -m "auto build complete"
+  - git commit -m "auto build complete (JOB $TRAVIS_JOB_NUMBER) [ci skip]"
   - git push --set-upstream origin branch-autobuild
 
