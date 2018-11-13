@@ -38,9 +38,9 @@ before_script:
 script:
   - ./script.sh
   - ls -Fl
-  - git checkout branch-autobuild
+  - git checkout -b branch-autobuild
   - git add .
   - git status
   - git commit -m "auto build complete (JOB $TRAVIS_JOB_NUMBER) [ci skip]"
-  - git push -f git@github.com:konohayuya/travis_test.git
+  - git push -f git@github.com:konohayuya/travis_test.git branch-autobuild:branch-autobuild
 
