@@ -10,5 +10,6 @@ do
     -V documentclass=ltjarticle \
     -V geometry:a4paper \
     --listings \
+    -r gfm
     -s
 done
