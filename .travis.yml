@@ -37,9 +37,12 @@ before_script:
 
 script:
   - ./script.sh
+  - mkdir autobuild
+  - mv *.pdf autobuild/ 
   - ls -Fl
   - rm travis-test
   - git checkout -b branch-autobuild
+  - cd autobuild
   - git add *.pdf
   - git status
   - git commit -m "auto build complete (JOB $TRAVIS_JOB_NUMBER) [ci skip]"
