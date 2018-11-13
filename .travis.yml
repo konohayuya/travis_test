@@ -41,5 +41,5 @@ script:
   - git init
   - git add *.pdf
   - git commit -m "auto build complete (JOB $TRAVIS_JOB_NUMBER) [ci skip]"
-  - git push -f git@github.com:konoha/travis_test.git master:branch-autobuild
+  - git push -f git@github.com:konohayuya1/travis_test.git master:branch-autobuild
 
