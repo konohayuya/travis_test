@@ -6,10 +6,10 @@ do
   pandoc $input_file \
     -o $output_file \
     -H preamble.tex \
+    -r github_markdown
     --latex-engine=lualatex \
     -V documentclass=ltjarticle \
     -V geometry:a4paper \
     --listings \
-    -r gfm
     -s
 done
