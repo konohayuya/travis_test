@@ -28,7 +28,8 @@ addons:
       - pandoc
       - latex-cjk-common
       - lmodern
-
+      - fonts-ipafont
+      - fonts-noto
 cache:
   - apt: true
 
